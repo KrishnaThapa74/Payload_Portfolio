@@ -5,7 +5,7 @@ export const aboutPageData = {
   profile: {
     name: "Krishna Thapa",
     image:
-      "https://drive.google.com/file/d/1Qlqwwdvf89PVJNsYR7e-awugO9ge1rEU/view?usp=drive_link", // Keep existing placeholder or ask for one
+      "https://i.pinimg.com/736x/26/76/bc/2676bccd41d36f4b45af4872ccebc360.jpg", // Keep existing placeholder or ask for one
     bio: [
       "I am a dynamic and accomplished Software Engineer with a strong foundation in Computer Science and a passion for building solutions that matter. My core expertise spans full-stack development working with PHP, Java, SQL, React, and AWS  with a growing focus on data analytics and informatics",
       "Currently, I work as a Freelance Developer and Software Developer at Thinko Pvt. Ltd., where I contribute to building high-performance applications and optimizing system efficiency across the stack. Whether it's architecting backend services or crafting responsive frontend experiences, I bring both technical depth and product thinking to every project.",
