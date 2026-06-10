@@ -1,0 +1,131 @@
+"use client";
+
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState } from "react";
+import { allProjectsData } from "@/data/site-data";
+
+function Archive() {
+  const [visibleCount, setVisibleCount] = useState(15);
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filteredItems = allProjectsData.items.filter((item) => {
+    if (activeFilter === "All") return true;
+    return (item as any).type === activeFilter;
+  });
+
+  const totalItems = filteredItems.length;
+  const visibleItems = filteredItems.slice(0, visibleCount);
+  const hasMore = visibleCount < totalItems;
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 15);
+  };
+
+  const filters = ["All", "Personal", "Corporate"];
+
+  return (
+    <div
+      id="all-projects"
+      className="my-6 sm:my-8 md:my-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10"
+    >
+      <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-end mb-10">
+        <div className="flex flex-col gap-4 w-full md:w-auto">
+          <span className="text-3xl sm:text-4xl md:text-5xl cursor-pointer font-medium">
+            {allProjectsData.title}
+          </span>
+          <span className="text-sm sm:text-base uppercase max-w-lg text-gray-700">
+            {allProjectsData.description}
+          </span>
+        </div>
+
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap gap-3 mt-4 md:mt-0 justify-start md:justify-end w-full md:w-auto">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              onClick={() => {
+                setActiveFilter(filter);
+                setVisibleCount(15);
+              }}
+              className={`uppercase text-xs font-medium tracking-wider px-5 py-2 rounded-full border transition-all duration-300 ${
+                activeFilter === filter
+                  ? "bg-black text-white border-black"
+                  : "bg-transparent text-neutral-500 border-neutral-300 hover:border-black hover:text-black"
+              }`}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 
+            auto-rows-[150px] sm:auto-rows-[180px] md:auto-rows-[200px] lg:auto-rows-[220px] 
+            mt-6 sm:mt-8 md:mt-10
+            border border-dashed border-neutral-400 
+            divide-x divide-y divide-dashed divide-neutral-400"
+      >
+        {visibleItems.map((item, index) => {
+          const content = (
+            <div className="p-3 sm:p-4 md:p-5 relative w-full h-full">
+              {/* Number Top Left */}
+              <span className="absolute top-2 sm:top-3 md:top-4 left-2 sm:left-3 md:left-4 text-xs sm:text-sm z-10 font-bold bg-white/70 px-1">
+                {index + 1}
+              </span>
+
+              <Image
+                src={item.src}
+                alt={`archive image ${index + 1}`}
+                fill
+                className="object-cover aspect-square transition-transform duration-300 p-3 sm:p-4 md:p-5 hover:rotate-3"
+                sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, (max-width: 1280px) 16vw, 12.5vw"
+              />
+            </div>
+          );
+
+          const href = item.id ? `/works/${item.id}` : undefined;
+          const isExternal = false;
+
+          if (href) {
+            return (
+              <Link
+                key={index}
+                href={href}
+                target={isExternal ? "_blank" : undefined}
+                className="block w-full h-full cursor-pointer"
+              >
+                {content}
+              </Link>
+            );
+          } else {
+            return (
+              <div key={index} className="w-full h-full">
+                {content}
+              </div>
+            );
+          }
+        })}
+
+        {/* SEE MORE BOX */}
+        {hasMore && (
+          <div
+            onClick={handleLoadMore}
+            className="p-3 sm:p-4 md:p-5 relative flex items-center justify-center cursor-pointer group"
+          >
+            <div className="w-full h-full bg-yellow-400 text-white rounded-md flex flex-col sm:flex-row gap-1 sm:gap-2 items-center justify-center group-hover:bg-yellow-400/80 transition">
+              <span className="text-xs font-semibold uppercase text-center">
+                {allProjectsData.seeMoreText}
+              </span>
+              <ArrowRight size={16} className="hidden sm:block" />
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default Archive;
