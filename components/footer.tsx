@@ -42,10 +42,10 @@ function Footer() {
               (Get in touch)
             </label>
             <a
-              href="mailto:lenishmagar@gmail.com"
+              href="mailto:thapakriss74@gmail.com"
               className="text-xl sm:text-2xl hover:opacity-50 transition-opacity"
             >
-              lenishmagar@gmail.com
+              thapakriss74@gmail.com
             </a>
           </div>
         </div>
@@ -80,7 +80,7 @@ function Footer() {
       </div>
       <div className="w-full flex justify-center items-center mt-10 md:mt-20 mb-4 overflow-hidden select-none">
         <h1 className="text-[12.8vw] font-black opacity-[0.08] leading-none tracking-tighter hover:opacity-20 transition-opacity duration-500">
-          R4V3NSH4D0W
+          KrishnaThapa74
         </h1>
       </div>
 
@@ -91,7 +91,7 @@ function Footer() {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 md:mb-10">
         <span className="flex items-center gap-1 text-xs sm:text-sm text-neutral-500">
           <Copyright size={14} className="inline-block shrink-0" />
-          2024 Lenish. All rights reserved.
+          2026 Krishna. All rights reserved.
         </span>
       </div>
     </footer>

@@ -18,22 +18,22 @@ function page() {
                 (Hello, World)
               </span>
               <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[68px] leading-tight">
-                I'm Lenish Magar
+                I'm Krishna Thapa
               </span>
             </div>
             <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[68px] leading-tight mt-2">
-              <div>Frontend Engineer.</div>
+              <div>Backend Engineer.</div>
             </div>
             <div className="flex flex-wrap gap-2 sm:gap-3 mt-4 text-xs sm:text-sm font-medium opacity-70">
               <span>React</span>
               <span>•</span>
-              <span>Next.js</span>
+              <span>Laravel</span>
               <span>•</span>
-              <span>TypeScript</span>
+              <span>AWS</span>
               <span>•</span>
-              <span>Node.js</span>
+              <span>SQL</span>
               <span>•</span>
-              <span>React Native</span>
+              <span>Java</span>
             </div>
           </ViewReveal>
         </div>
