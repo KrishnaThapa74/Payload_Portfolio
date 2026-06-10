@@ -15,7 +15,7 @@ export const aboutPageData = {
     instagram: "@Krishnathapa10", // Placeholder based on name
     linkedin: {
       text: "linkedin.com/in/krishna-thapa",
-      href: "https://www.linkedin.com/in/krishna-thapa-2419521b7/
+      href: "https://www.linkedin.com/in/krishna-thapa-2419521b7/"
   },
   skills: sharedSkills,
   experiences: sharedExperiences,
