@@ -7,15 +7,16 @@ export const aboutPageData = {
     image:
       "https://drive.google.com/file/d/1Qlqwwdvf89PVJNsYR7e-awugO9ge1rEU/view?usp=drive_link", // Keep existing placeholder or ask for one
     bio: [
-      "I am a dynamic and accomplished Frontend Engineer specializing in React Native and Next.js. With a passion for shaping the digital landscape, I bring a wealth of creativity and technical expertise to drive success in diverse projects.",
-      "Currently, I work as a Next.js Developer at Curves 'n Colors, focusing on frontend performance and scalability. Beyond the frontend, I leverage strong backend capabilities in Node.js (Hono, PostgreSQL, Docker) to architect complete solutions for personal projects like Luxstore.",
-      "My journey includes significant experience in FinTech mobile app development, where I prioritized performance and user engagement. I am committed to continuous learning, excellence, and bridging the gap between elegant design and robust engineering.",
+      "I am a dynamic and accomplished Software Engineer with a strong foundation in Computer Science and a passion for building solutions that matter. My core expertise spans full-stack development working with PHP, Java, SQL, React, and AWS  with a growing focus on data analytics and informatics",
+      "Currently, I work as a Freelance Developer and Software Developer at Thinko Pvt. Ltd., where I contribute to building high-performance applications and optimizing system efficiency across the stack. Whether it's architecting backend services or crafting responsive frontend experiences, I bring both technical depth and product thinking to every project.",
+      "My journey has given me hands-on experience across web and software development, from database design to cloud infrastructure on AWS. I'm committed to continuous learning, scalable engineering, and using data-driven approaches to solve complex, real-world problems. I believe in bridging the gap between clean code and meaningful impact.",
     ],
     email: "Thapakriss74@gmail.com",
     instagram: "@Krishnathapa10", // Placeholder based on name
     linkedin: {
       text: "linkedin.com/in/krishna-thapa",
-      href: "https://www.linkedin.com/in/krishna-thapa-2419521b7/"
+      href: "https://www.linkedin.com/in/krishna-thapa-2419521b7/",
+    },
   },
   skills: sharedSkills,
   experiences: sharedExperiences,
@@ -37,8 +38,7 @@ export const aboutPageData = {
       degree: "Higher Secondary Education (+2)",
       image:
         "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2700&auto=format&fit=crop",
-      details:
-        "Completed Higher Secondary Education.",
+      details: "Completed Higher Secondary Education.",
     },
     {
       from: "2006",
@@ -47,8 +47,7 @@ export const aboutPageData = {
       degree: "Secondary Education (SLC)",
       image:
         "https://images.unsplash.com/photo-1509062522246-37559cc79276?q=80&w=2700&auto=format&fit=crop",
-      details:
-        "Completed School Leaving Certificate (SLC) with excellence.",
+      details: "Completed School Leaving Certificate (SLC) with excellence.",
     },
   ],
   achievements: [
@@ -60,7 +59,7 @@ export const aboutPageData = {
         "https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=2670&auto=format&fit=crop",
       details:
         "Successfully architected 'Luxstore', a monolithic-style e-commerce ecosystem using Hono, Next.js, and Docker.",
-    }
+    },
   ],
   recognitions: [
     {
